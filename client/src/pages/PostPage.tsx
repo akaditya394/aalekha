@@ -17,7 +17,7 @@ function PostPage() {
   const [post, setPost] = useState<Post>();
 
   useEffect(() => {
-    Axios.get(`https://aalekha.herokuapp.com/getPost/${param.postId}`).then(
+    Axios.get(`https://aalekha.onrender.com/${param.postId}`).then(
       (response) => {
         setPost(response.data[0]);
       }
@@ -25,7 +25,7 @@ function PostPage() {
   }, [param.postId]);
 
   const deletePost = () => {
-    Axios.get(`https://aalekha.herokuapp.com/deletePost/${param.postId}`)
+    Axios.get(`https://aalekha.onrender.com/${param.postId}`)
       .then((response) => {
         console.log(response);
       })
