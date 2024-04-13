@@ -13,7 +13,7 @@ function CreatePage() {
   const formSubmitHandler: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     const notification = toast.loading("Creating post....");
-    Axios.post(`${user && "https://aalekha.herokuapp.com/createPost"}`, {
+    Axios.post(`${user && "https://aalekha.onrender.com/createPost"}`, {
       author: user?.email,
       body: content,
     })
