@@ -22,7 +22,7 @@ function Home() {
 
   useEffect(() => {
     Axios.get(
-      `${user && `https://aalekha.herokuapp.com/getPosts/${user?.email!}`}`
+      `${user && `https://aalekha.onrender.com/getPosts/${user?.email!}`}`
     ).then((response) => {
       console.log(response.data);
       setPosts(response.data);
